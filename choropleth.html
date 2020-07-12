@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- This map code and design were inspired by the tutorial in Flowing Data: http://flowingdata.com/2015/02/19/make-an-interactive-map-with-category-filters/ -->
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="chorostyle.css">
+    <title>Global Suicide Rates in 2005.</title>
+    
+</head>
+
+<div class="row col-sm-8 col-sm-offset-2 main">
+    <h2>Global Suicide Rates in 2005</h2>
+    <p>Data Source: <a href="http://ghdx.healthdata.org/gbd-results-tool">IHME/GHDx</a>.<br/> 
+    <p>Death by suicide is an extremely complex issue that causes pain to hundreds of thousands of people every year around the world. The objective of this visualization is to illustrate some of the global trends and to contribute to an informed, open debate about ways to prevent suicide.
+    <strong>If you are dealing with suicidal thoughts you can receive immediate help by visiting resources such as Suicide.org, or by calling 1-800-SUICIDE in the US.</strong>
+    </p>
+    <div id="map"></div>
+</div>
+
+<div id="tooltip" class="tooltip">
+    <h3 class="name"></h3>
+    <div class="title">Suicide Rate</div>
+    <div class="rate"></div>
+    <div class="desc">(age-adjusted suicides /100,000 people)</div>
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.9.0/d3-legend.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="map.js"></script>

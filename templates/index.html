@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Global Suicide Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static',filename = 'main.css')}}">
+  
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Global Suicide Dashboard</h1>
+        <p>Use the interactive map/charts below to explore the dataset</p>
+      </div>
+    </div>
+</div>
+    <!-- <div class="row">
+      <div class="col-md-2">
+        <div class="well"id="samplePanel">
+          <h5>Select Country:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary" id="metaPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div> -->
+      <div class="row col-sm-8 col-sm-offset-2 main">
+        <h2>Global Suicide Rates in 2005</h2>
+            <p>Data Source: <a href="http://ghdx.healthdata.org/gbd-results-tool">IHME/GHDx</a>.<br/> 
+            <p>Death by suicide is an extremely complex issue that causes pain to hundreds of thousands of people every year around the world. The objective of this visualization is to illustrate some of the global trends and to contribute to an informed, open debate about ways to prevent suicide.
+            <strong>If you are dealing with suicidal thoughts you can receive immediate help by visiting resources such as Suicide.org, or by calling 1-800-SUICIDE in the US.</strong>
+        </p>
+        <div id="map"></div><!-- choropleth map will appear here! -->
+        <hr>
+    </div>
+    
+    <div id="tooltip" class="tooltip">
+        <h3 class="name"></h3>
+        <div class="title">Suicide Rate</div>
+        <div class="rate"></div>
+        <div class="desc">(age-adjusted suicides /100,000 people)</div>
+    </div>
+  </div>
+</div>
+   <div class="col-md-6">
+         <div id="agebar">
+          <h6> In the chart here we see suicide rates broken down by age group. <br> These rates are given as the number of suicide deaths per 100,000 people in a given demographic. <br> Globally, suicide rates are actually highest in people aged 70 years and older. And actually, suicides globally follow a standard pattern of the older the age group, the higher the death rate.</h2>
+         </div><!-- age chart will appear here! -->
+    </div>
+    <div class="col-md-6">
+        
+        <div id="genderbar"><h6>This chart compares suicide rates in men (shown on the y-axis) versus rates in women (shown on the x-axis). <br> <br>
+          Globally, suicide rates in men are just over twice as high as for women. In 2017 – as we see in the visualization – the global suicide rate for women was 6.3 deaths per 100,000; for men, it was just over twice that figure at 13.9 per 100,000.</h6></div><!-- Gender chart will appear here! -->
+        
+      </div>
+    </div>
+  </div>
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://d3js.org/queue.v1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.9.0/d3-legend.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="{{url_for('static',filename='map.js')}}"></script>
+  <script src="{{url_for('static',filename='age.js')}}"></script>
+  <script src="{{url_for('static',filename='gender.js')}}"></script>
+
+</body>
+
+</html>

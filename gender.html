@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Explore Suicide Data</title>
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <style>
+        body {
+            font: 10px sans-serif;
+        }
+        select {
+            display: block;
+        }
+        .bar {
+            fill: purple;
+            opacity: 0.8;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+        </style>
+    </head>
+    <body>
+
+      
+        <div id="genderbar"> 
+
+            <h2>This chart compares suicide rates in men (shown on the y-axis) versus rates in women (shown on the x-axis). <br> <br>
+                Globally, suicide rates in men are just over twice as high as for women. In 2017 – as we see in the visualization – the global suicide rate for women was 6.3 deaths per 100,000; for men, it was just over twice that figure at 13.9 per 100,000.</h2>
+
+
+        </div>
+        <script type="text/javascript" src="gender.js" >
+          
+        </script>
+
+
+    </body>
+</html>

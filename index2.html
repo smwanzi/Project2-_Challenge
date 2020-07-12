@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Explore Suicide Data</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href = "chorostyle.css">
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="https://d3js.org/queue.v1.min.js"></script>
+        <script src="jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.9.0/d3-legend.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+        <style>
+        body {
+            font: 10px sans-serif;
+        }
+        select {
+            display: block;
+        }
+        .bar {
+            fill: purple;
+            opacity: 0.8;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .jumbotron {	
+            color: #E8993F;	
+            font-family: Garamond;	
+            background-image: url("suicide.jpg");	
+            background-size: cover;	background-repeat: no-repeat;	
+            background-position: center;	padding-left: 70px;
+         }
+        </style>
+    </head>
+
+    <body> 
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12 jumbotron text-center">
+                <h1> World Suicide Rates (2005 - 2017) </h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+              </div>
+            </div>
+          </div>
+    
+
+    <!-- Visualizations -->
+<!--     
+    <div class="container">
+        <div class="row" >
+          <div class="col" id = "agebar">
+           
+          </div>
+          <div class="col" id = "genderbar">
+           
+          </div>
+        </div>
+    </div>
+
+    <div id = "map"> </div> -->
+     
+    <div style= "width: 450px;margin:0 auto;padding-left: 100px;padding-right: 50px;border-left-width: 50px;height: 200px;">
+        <a href = "choropleth.html" style="font-size:20px"> Global Suicide Trends</a><br><br>
+        <a href = "age.html" style="font-size:20px"> Suicides Rates by Age </a> <br><br>
+        <a href = "gender.html" style="font-size:20px"> Suicide Rates by Gender  </a> 
+               
+    </div>
+    
+    
+   
+    <script type="text/javascript" src="gender.js"> </script>
+    <script type="text/javascript" src="age.js"> </script>
+    <script type="text/javascript" src="map.js"> </script>
+
+</body>
+
+
+
+
+</html>
